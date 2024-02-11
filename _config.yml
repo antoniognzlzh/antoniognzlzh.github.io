@@ -3,8 +3,8 @@ title: Antonio Gonzalez Portfolio
 email: antonio@gonzalezh.com
 description: > # this means to ignore newlines until "baseurl:"
   Personal Portfolio
-baseurl: "https://antoniognzlzh.github.io/index.html" # the subpath of your site, e.g. /blog
-url: "https://antoniognzlzh.github.io/index.html" # add https://
+baseurl: https://antoniognzlzh.github.io/index.html # the subpath of your site, e.g. /blog
+url: https://antoniognzlzh.github.io/index.html # add https://
 twitter_username: #
 github_username:  #
 
