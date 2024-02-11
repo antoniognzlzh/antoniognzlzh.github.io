@@ -10,7 +10,9 @@ header {
     background-color: #183f69;
     color: #ffffff;
     padding: 2em 0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adjust the opacity (alpha value) if needed */
 }
+
 
 .profile-pic-container {
     width: 15em; /* Adjust width as needed */
@@ -36,7 +38,7 @@ p {
     margin: 1em 0;
 }
 
-#about-me, #expertise, #contact {
+#about-me, #expertise, #tech-skills, #soft-skills, #contact {
     background-color: #ffffff;
     margin: 2em 5%;
     padding: 2em;
@@ -59,7 +61,7 @@ li {
         height: 5em;
     }
 
-    #about-me, #expertise, #contact {
+    #about-me, #expertise, #tech-skills, #soft-skills, #contact {
         margin: 2em 3%;
     }
 }
