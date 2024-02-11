@@ -2,17 +2,64 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
 }
 
-h1 {
-    padding-top: 4em;
+header {
+    background-color: #183f69;
+    color: #ffffff;
+    padding: 2em 0;
+}
+
+.profile-pic-container {
+    width: 15em; /* Adjust width as needed */
+    height: 20em; /* Set the height to less than the image's height to "crop" the bottom */
+    overflow: hidden; /* Ensures anything outside this container is not shown */
+    border-radius: 50% / 30%; /* Adjust to match your desired oval shape */
+    border: 4px solid #ffffff;
+    display: inline-block; /* Adjust as needed to fit your layout */
+}
+
+.profile-pic {
+    width: 100%; /* Ensures the image covers the width of the container */
+    height: 22.5em; /* Original height, or adjust as needed */
+    object-fit: cover; /* Ensures the image covers the container, may crop the image */
+    object-position: top; /* Aligns the image to the top, effectively "cropping" the bottom */
+}
+
+h1, h2 {
+    margin: 0.5em 0;
 }
 
 p {
-    margin: 2em 0;
+    margin: 1em 0;
 }
 
-img {
-    width: 40em;
-    max-width: 90%;
+#about-me, #expertise, #contact {
+    background-color: #ffffff;
+    margin: 2em 5%;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 0.5em 0;
+}
+
+@media (max-width: 768px) {
+    .profile-pic {
+        width: 5em;
+        height: 5em;
+    }
+
+    #about-me, #expertise, #contact {
+        margin: 2em 3%;
+    }
 }
