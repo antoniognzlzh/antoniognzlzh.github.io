@@ -3,8 +3,8 @@ title: Antonio Gonzalez Portfolio
 email: antonio@gonzalezh.com
 description: > # this means to ignore newlines until "baseurl:"
   Personal Portfolio
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://antoniognzlzh.github.io" # add https://
+baseurl: "" # subpath
+url: "https://gonzalezh.com" #
 twitter_username: #
 github_username:  #
 
@@ -13,15 +13,3 @@ markdown: kramdown
 theme: jekyll-theme-minimal
 plugins:
   - jekyll-feed
-
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
