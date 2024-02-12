@@ -55,6 +55,29 @@ li {
     padding: 0.5em 0;
 }
 
+footer {
+    background-color: #183f69; /* Matches the header color */
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 5%;
+    font-size: 0.8em;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-left a, .footer-right {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+.footer-left a:hover {
+    text-decoration: underline;
+}
+
 @media (max-width: 768px) {
     .profile-pic {
         width: 5em;
