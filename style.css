@@ -14,21 +14,23 @@ header {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adjust the opacity (alpha value) if needed */
 }
 
-
 .profile-pic-container {
     width: 15em; /* Adjust width as needed */
     height: 20em; /* Set the height to less than the image's height to "crop" the bottom */
     overflow: hidden; /* Ensures anything outside this container is not shown */
     border-radius: 50% / 30%; /* Adjust to match your desired oval shape */
     border: 4px solid #ffffff;
-    display: inline-block; /* Adjust as needed to fit your layout */
+    margin: 0 auto; /* Center the container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .profile-pic {
     width: 100%; /* Ensures the image covers the width of the container */
-    height: 22.5em; /* Original height, or adjust as needed */
+    height: 21em; /* Original height, or adjust as needed */
     object-fit: cover; /* Ensures the image covers the container, may crop the image */
-    object-position: top; /* Aligns the image to the top, effectively "cropping" the bottom */
+    object-position: top center; /* Aligns the image to the top center, effectively "cropping" the bottom */
 }
 
 h1, h2 {
@@ -80,13 +82,39 @@ footer {
     text-decoration: underline;
 }
 
+/* Responsive design */
 @media (max-width: 768px) {
+    .profile-pic-container {
+        width: 10em;
+        height: 10em;
+    }
+
     .profile-pic {
-        width: 5em;
-        height: 5em;
+        width: 100%;
+        height: 10em;
+        object-position: top center; /* Ensures the image is centered horizontally */
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    header p {
+        font-size: 1em;
     }
 
     #about-me, #expertise, #tech-skills, #soft-skills, #contact {
         margin: 2em 3%;
+        padding: 1em;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-left, .footer-right {
+        width: 100%;
+        margin-bottom: 1em;
     }
 }
