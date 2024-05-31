@@ -1,0 +1,105 @@
+/* General body styling for resume */
+body {
+    height: 100%; /* Full height of the viewport */
+    margin: 0; /* No margin */
+    padding: 0; /* No padding */
+    text-align: left; /* Align text to the left */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font family */
+    background-color: #f4f4f4; /* Light grey background color */
+    color: #333; /* Dark text color for readability */
+}
+
+/* Navigation bar styling */
+.navbar {
+    background-color: #183f69; /* Navbar background color */
+    overflow: hidden; /* Ensure content inside doesn't overflow */
+    position: fixed; /* Fixes navbar at the top */
+    top: 0; /* Positions navbar at the top */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensures navbar is above other content */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: flex-end; /* Align navbar items to the right */
+}
+
+.navbar a {
+    display: block; /* Makes the links block elements */
+    color: #ffffff; /* Link text color */
+    text-align: center; /* Center the text */
+    padding: 14px 20px; /* Padding for clickable area */
+    text-decoration: none; /* Removes underline */
+    font-size: 1em; /* Font size */
+}
+
+.navbar a:hover {
+    background-color: #575757; /* Hover background color */
+    color: white; /* Hover text color */
+}
+
+/* Resume section styling */
+#resume {
+    background-color: #ffffff; /* White background for the resume */
+    margin: 4em auto 2em auto; /* Center the resume and add top margin for navbar */
+    padding: 2em; /* Padding inside the resume */
+    width: 60%; /* Width of the resume section */
+    max-width: 800px; /* Maximum width of the resume section */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+#resume h1 {
+    font-size: 2em; /* Font size for main heading */
+    margin-bottom: 0.5em; /* Margin below the heading */
+    color: #183f69; /* Heading color */
+}
+
+#resume h2 {
+    font-size: 1.5em; /* Font size for sub-headings */
+    margin-top: 1em; /* Margin above the sub-headings */
+    color: #183f69; /* Sub-heading color */
+}
+
+#resume h3 {
+    font-size: 1.2em; /* Font size for tertiary headings */
+    margin-top: 0.8em; /* Margin above the tertiary headings */
+    color: #183f69; /* Tertiary heading color */
+}
+
+#resume p {
+    margin: 0.5em 0; /* Margin for paragraphs */
+    line-height: 1.6; /* Line height for readability */
+}
+
+#resume ul {
+    list-style-type: disc; /* Use disc bullets for lists */
+    padding-left: 1.5em; /* Indent list items */
+    margin: 0.5em 0; /* Margin for lists */
+}
+
+#resume ul li {
+    margin: 0.3em 0; /* Margin for list items */
+}
+
+/* Footer styling */
+footer {
+    background-color: #183f69; /* Footer background color */
+    color: #ffffff; /* Footer text color */
+    padding: 1em 0; /* Padding inside the footer */
+    font-size: 0.8em; /* Font size */
+    text-align: center; /* Center align the text */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .navbar a {
+        float: none; /* Remove float for smaller screens */
+        display: block; /* Display links as block elements */
+        text-align: left; /* Align text to the left */
+    }
+
+    #resume {
+        margin: 2em 3%; /* Adjust margins for smaller screens */
+        padding: 1em; /* Adjust padding for smaller screens */
+        width: auto; /* Auto width for smaller screens */
+    }
+}
