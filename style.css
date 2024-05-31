@@ -11,14 +11,14 @@ header {
     background-color: #183f69;
     color: #ffffff;
     padding: 2em 0;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adjust the opacity (alpha value) if needed */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Opacity (alpha value) */
 }
 
 .profile-pic-container {
-    width: 15em; /* Adjust width as needed */
+    width: 15em; 
     height: 20em; /* Set the height to less than the image's height to "crop" the bottom */
     overflow: hidden; /* Ensures anything outside this container is not shown */
-    border-radius: 50% / 30%; /* Adjust to match your desired oval shape */
+    border-radius: 50% / 30%; /* Creates oval shape */
     border: 4px solid #ffffff;
     margin: 0 auto; /* Center the container */
     display: flex;
@@ -28,8 +28,8 @@ header {
 
 .profile-pic {
     width: 100%; /* Ensures the image covers the width of the container */
-    height: 21em; /* Original height, or adjust as needed */
-    object-fit: cover; /* Ensures the image covers the container, may crop the image */
+    height: 21em; 
+    object-fit: cover; /* Ensures the image covers the container */
     object-position: top center; /* Aligns the image to the top center, effectively "cropping" the bottom */
 }
 
@@ -58,28 +58,36 @@ li {
     padding: 0.5em 0;
 }
 
+.contact-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+.contact-icons a {
+    color: #183f69;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.contact-icons i {
+    margin-right: 0.5em;
+}
+
+.contact-icons a:hover {
+    text-decoration: underline;
+}
+
 footer {
     background-color: #183f69; /* Matches the header color */
     color: #ffffff;
-    display: flex;
-    justify-content: space-between;
     padding: 1em 5%;
     font-size: 0.8em;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    box-sizing: border-box;
 }
 
-.footer-left a, .footer-right {
-    color: #ffffff;
-    text-decoration: none;
-    padding: 0 10px;
-}
-
-.footer-left a:hover {
-    text-decoration: underline;
+.footer-center {
+    text-align: center;
 }
 
 /* Responsive design */
@@ -109,12 +117,8 @@ footer {
     }
 
     footer {
-        flex-direction: column;
         text-align: center;
     }
 
-    .footer-left, .footer-right {
-        width: 100%;
-        margin-bottom: 1em;
-    }
+    
 }
