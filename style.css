@@ -11,19 +11,20 @@ body {
 /* Navigation bar styling */
 .navbar {
     background-color: #183f69; /* Navbar background color */
-    overflow: hidden; /* Ensures content inside doesn't overflow */
+    overflow: hidden; /* Ensure content inside doesn't overflow */
     position: fixed; /* Fixes navbar at the top */
     top: 0; /* Positions navbar at the top */
     width: 100%; /* Full width */
     z-index: 1000; /* Ensures navbar is above other content */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: flex-end; /* Align navbar items to the right */
 }
 
 .navbar a {
-    float: left; /* Aligns links to the left */
     display: block; /* Makes the links block elements */
     color: #ffffff; /* Link text color */
-    text-align: center; /* Centers the text */
+    text-align: center; /* Center the text */
     padding: 14px 20px; /* Padding for clickable area */
     text-decoration: none; /* Removes underline */
     font-size: 1em; /* Font size */

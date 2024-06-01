@@ -45,29 +45,53 @@ body {
     max-width: 800px; /* Maximum width of the resume section */
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    text-align: left; /* Align text to the left */
+}
+
+/* Header flex container styling */
+.header-flex {
+    display: flex; /* Use Flexbox for layout */
+    justify-content: space-between; /* Space between name and contact info */
+    align-items: center; /* Align items vertically centered */
+    margin-bottom: 1em; /* Add some margin below the header */
+}
+
+/* Contact info styling */
+.contact-info {
+    text-align: right; /* Right-align the text inside contact info */
+    font-size: 0.9em; /* Slightly smaller font size for contact info */
+}
+
+.contact-info p {
+    margin: 0.2em 0; /* Reduce margin for contact info paragraphs */
 }
 
 #resume h1 {
-    font-size: 2em; /* Font size for main heading */
+    font-size: 2.5em; /* Font size for main heading */
     margin-bottom: 0.5em; /* Margin below the heading */
     color: #183f69; /* Heading color */
 }
 
+#resume p {
+    margin: 0.3em 0; /* Margin for paragraphs */
+    text-align: justify; /* Justify text for paragraphs*/
+}
+
 #resume h2 {
-    font-size: 1.5em; /* Font size for sub-headings */
-    margin-top: 1em; /* Margin above the sub-headings */
+    font-size: 1.8em; /* Font size for sub-headings */
+    margin-top: 1.2em; /* Margin above the sub-headings */
+    margin-bottom: 0.1em; /* Reduced margin below the sub-headings */
     color: #183f69; /* Sub-heading color */
+    text-transform: uppercase; /* Uppercase text for sub-headings */
+    border-bottom: 2px solid #183f69; /* Border below sub-headings */
+    padding-bottom: 0.2em; /* Padding below sub-headings */
 }
 
 #resume h3 {
-    font-size: 1.2em; /* Font size for tertiary headings */
-    margin-top: 0.8em; /* Margin above the tertiary headings */
+    font-size: 1.4em; /* Font size for tertiary headings */
+    margin-top: 1em; /* Margin above the tertiary headings */
+    margin-bottom: 0.3em; /* Reduced margin below the tertiary headings */
     color: #183f69; /* Tertiary heading color */
-}
-
-#resume p {
-    margin: 0.5em 0; /* Margin for paragraphs */
-    line-height: 1.6; /* Line height for readability */
 }
 
 #resume ul {
@@ -78,6 +102,7 @@ body {
 
 #resume ul li {
     margin: 0.3em 0; /* Margin for list items */
+    text-align: justify; /* Justify text */
 }
 
 /* Footer styling */
