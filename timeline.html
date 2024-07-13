@@ -3,20 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
+    <title>Timeline</title>
     <link rel="stylesheet" href="timeline.css">
 </head>
 <body>
-    <div class="container">
+    <!-- Navigation bar with links to Home and Resume pages -->
+    <nav class="navbar">
+        <a href="resume.html">Resume</a>
+        <a href="index.html">Home</a>
+    </nav>
+    <div class="container" style="margin-top: 10px;">
         <div class="slideshow" id="slideshow"></div>
-        <!-- <div class="legend">Select a point on the timeline</div> -->
+        <div class="legend">Select a point on the timeline</div>
         <div class="timeline-container">
             <div class="timeline">
                 <div class="timeline-bar"></div>
             </div>
         </div>
     </div>
-
+    <!-- Footer section -->
+    <footer>
+        <div class="footer-center">
+            © 2024 Antonio Gonzalez All Rights Reserved.
+        </div>
+    </footer>
     <script src="timeline.js"></script>
 </body>
 </html>

@@ -1,23 +1,176 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: Arial, sans-serif;
+/* General body styling */
+body {
+    height: 100%; /* Full height of the viewport */
+    margin: 0; /* No margin */
+    padding: 0; /* No padding */
+    text-align: center; /* Center text alignment */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font family */
+    background-color: #f4f4f4; /* Light grey background color */
 }
+
+/* Navigation bar styling */
+.navbar {
+    background-color: #183f69; /* Navbar background color */
+    overflow: hidden; /* Ensure content inside doesn't overflow */
+    position: fixed; /* Fixes navbar at the top */
+    top: 0; /* Positions navbar at the top */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensures navbar is above other content */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: flex-end; /* Align navbar items to the right */
+}
+
+.navbar a {
+    display: block; /* Makes the links block elements */
+    color: #ffffff; /* Link text color */
+    text-align: center; /* Center the text */
+    padding: 14px 20px; /* Padding for clickable area */
+    text-decoration: none; /* Removes underline */
+    font-size: 1em; /* Font size */
+}
+
+.navbar a:hover {
+    background-color: #575757; /* Hover background color */
+    color: white; /* Hover text color */
+}
+
+/* Header section styling */
+header {
+    background-color: #183f69; /* Header background color */
+    color: #ffffff; /* Header text color */
+    padding: 2em 0; /* Padding around the header */
+    margin-top: 50px; /* Ensure content is not hidden behind the navbar */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+.profile-pic-container {
+    width: 15em; /* Width of the profile picture container */
+    height: 20em; /* Height of the profile picture container */
+    overflow: hidden; /* Ensures anything outside this container is not shown */
+    border-radius: 50% / 30%; /* Creates oval shape */
+    border: 4px solid #ffffff; /* White border around the picture */
+    margin: 0 auto; /* Center the container */
+    display: flex; /* Flexbox for alignment */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+}
+
+.profile-pic {
+    width: 100%; /* Ensures the image covers the width of the container */
+    height: 21em; /* Height of the image */
+    object-fit: cover; /* Ensures the image covers the container */
+    object-position: top center; /* Aligns the image to the top center */
+}
+
+h1, h2 {
+    margin: 0.5em 0; /* Margin around headings */
+}
+
+p {
+    margin: 1em 0; /* Margin around paragraphs */
+}
+
+/* Section styling */
+.container, #about-me, #expertise, #tech-skills, #soft-skills, #contact, #resume {
+    background-color: #ffffff; /* Section background color */
+    margin: 2em 5%; /* Margin around sections */
+    padding: 2em; /* Padding inside sections */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+ul {
+    list-style: none; /* Removes bullet points */
+    padding: 0; /* Removes padding */
+}
+
+li {
+    padding: 0.5em 0; /* Padding around list items */
+}
+
+/* Contact icons styling */
+.contact-icons {
+    display: flex; /* Flexbox for alignment */
+    flex-direction: column; /* Stack icons vertically */
+    align-items: center; /* Center icons */
+    gap: 1em; /* Space between icons */
+}
+
+.contact-icons a {
+    color: #183f69; /* Link text color */
+    text-decoration: none; /* Removes underline */
+    font-size: 1.2em; /* Font size */
+}
+
+.contact-icons i {
+    margin-right: 0.5em; /* Space between icon and text */
+}
+
+.contact-icons a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Footer styling */
+footer {
+    background-color: #183f69; /* Footer background color */
+    color: #ffffff; /* Footer text color */
+    padding: 1em 0; /* Padding inside the footer */
+    font-size: 0.8em; /* Font size */
+}
+
+.footer-center {
+    text-align: center; /* Center align the text */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .profile-pic-container {
+        width: 10em; /* Smaller width for small screens */
+        height: 10em; /* Smaller height for small screens */
+    }
+
+    .profile-pic {
+        width: 100%; /* Ensures the image covers the width of the container */
+        height: 10em; /* Height of the image */
+        object-position: top center; /* Ensures the image is centered horizontally */
+    }
+
+    header h1 {
+        font-size: 1.5em; /* Smaller font size for small screens */
+    }
+
+    header p {
+        font-size: 1em; /* Smaller font size for small screens */
+    }
+
+    #about-me, #expertise, #tech-skills, #soft-skills, #contact, #resume {
+        margin: 2em 3%; /* Smaller margin for small screens */
+        padding: 1em; /* Smaller padding for small screens */
+    }
+
+    footer {
+        text-align: center; /* Center align the footer text */
+    }
+}
+
+/* Timeline-specific styles */
 .container {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+    margin-top: 20px; /* Adjust margin to avoid overlap with the header */
 }
+
 .slideshow {
     flex-grow: 1;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: left;
     background-color: #f0f0f0;
     overflow: hidden;
     position: relative;
+    width: 60%; /* Adjust width to take less space horizontally */
+    margin: 0 auto; /* Center the slideshow */
 }
+
 .slide {
     position: absolute;
     top: 0;
@@ -28,65 +181,13 @@ body, html {
     transition: opacity 0.5s ease-in-out;
     display: flex;
     justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    text-align: center;
+    align-items: left;
+    text-align: left; /* Align text to the left */
     padding: 20px;
     box-sizing: border-box;
+    overflow-y: auto; /* Add vertical scroll if content overflows */
 }
+
 .slide.active {
     opacity: 1;
-}
-.timeline-container {
-    padding: 20px 0;
-    background-color: #fff;
-}
-.timeline {
-    width: 80%;
-    margin: 0 auto;
-    position: relative;
-}
-.timeline-bar {
-    height: 4px;
-    background-color: #333;
-    position: relative;
-}
-.timeline-point {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: #fff;
-    border: 2px solid #333;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-.timeline-point:hover, .timeline-point.active {
-    transform: translateY(-50%) scale(1.2);
-}
-.timeline-content {
-    position: absolute;
-    width: 120px;
-    background-color: #fff;
-    padding: 5px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    font-size: 12px;
-    text-align: center;
-}
-.timeline-content.top {
-    bottom: 30px;
-    transform: translateX(-50%);
-}
-.timeline-content.bottom {
-    top: 30px;
-    transform: translateX(-50%);
-}
-.legend {
-    text-align: center;
-    padding: 10px 0;
-    font-style: italic;
-    color: #666;
 }
