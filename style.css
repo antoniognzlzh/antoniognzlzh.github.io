@@ -1,309 +1,155 @@
-/* General body styling for light mode */
+/* General body styling */
 body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-/* Dark mode body styling */
-body.dark-mode {
-    background-color: #000;
-    color: #eee;
+    height: 100%; /* Full height of the viewport */
+    margin: 0; /* No margin */
+    padding: 0; /* No padding */
+    text-align: center; /* Center text alignment */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font family */
+    background-color: #f4f4f4; /* Light grey background color */
 }
 
 /* Navigation bar styling */
 .navbar {
-    background-color: #183f69; /* Light mode: blue */
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 0 10px;
-}
-
-/* In dark mode, navbar becomes black */
-body.dark-mode .navbar {
-    background-color: #000;
+    background-color: #183f69; /* Navbar background color */
+    overflow: hidden; /* Ensure content inside doesn't overflow */
+    position: fixed; /* Fixes navbar at the top */
+    top: 0; /* Positions navbar at the top */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensures navbar is above other content */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: flex-end; /* Align navbar items to the right */
 }
 
 .navbar a {
-    display: block;
-    color: #ffffff;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-    font-size: 1em;
+    display: block; /* Makes the links block elements */
+    color: #ffffff; /* Link text color */
+    text-align: center; /* Center the text */
+    padding: 14px 20px; /* Padding for clickable area */
+    text-decoration: none; /* Removes underline */
+    font-size: 1em; /* Font size */
 }
 
 .navbar a:hover {
-    background-color: #575757;
-    color: white;
-}
-
-/* Toggle button styling (integrated into navbar) */
-.toggle-btn {
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    margin-left: 1rem;
-    background-color: inherit; /* Matches navbar background */
-    color: #ffffff;
+    background-color: #575757; /* Hover background color */
+    color: white; /* Hover text color */
 }
 
 /* Header section styling */
 header {
-    background-color: #183f69; /* Light mode: blue */
-    color: #ffffff;
-    padding: 2em 0;
-    margin-top: 60px; /* Account for fixed navbar */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-/* In dark mode, header becomes black */
-body.dark-mode header {
-    background-color: #000;
-}
-
-header h1, header p {
-    margin: 0.5em 0;
+    background-color: #183f69; /* Header background color */
+    color: #ffffff; /* Header text color */
+    padding: 2em 0; /* Padding around the header */
+    margin-top: 50px; /* Ensure content is not hidden behind the navbar */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow for depth */
 }
 
 .profile-pic-container {
-    width: 15em;
-    height: 20em;
-    overflow: hidden;
-    border-radius: 50%; /* Smooth oval shape */
-    border: 4px solid #ffffff;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* In dark mode, update border color if desired */
-body.dark-mode .profile-pic-container {
-    border: 4px solid #eee;
+    width: 15em; /* Width of the profile picture container */
+    height: 20em; /* Height of the profile picture container */
+    overflow: hidden; /* Ensures anything outside this container is not shown */
+    border-radius: 50% / 30%; /* Creates oval shape */
+    border: 4px solid #ffffff; /* White border around the picture */
+    margin: 0 auto; /* Center the container */
+    display: flex; /* Flexbox for alignment */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
 }
 
 .profile-pic {
-    width: 100%;
-    height: 21em;
-    object-fit: cover;
-    object-position: top center;
-    transform: scale(1.05); /* Moderate zoom */
+    width: 100%; /* Ensures the image covers the width of the container */
+    height: 21em; /* Height of the image */
+    object-fit: cover; /* Ensures the image covers the container */
+    object-position: top center; /* Aligns the image to the top center */
 }
 
-/* Section styling for light mode */
-body:not(.dark-mode) #about-me, 
-body:not(.dark-mode) #expertise, 
-body:not(.dark-mode) #tech-skills, 
-body:not(.dark-mode) #soft-skills, 
-body:not(.dark-mode) #contact, 
-body:not(.dark-mode) #resume {
-    background-color: #ffffff;
-    color: #333;
-    margin: 2em 5%;
-    padding: 2em;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+h1, h2 {
+    margin: 0.5em 0; /* Margin around headings */
 }
 
-/* Section styling for dark mode */
-body.dark-mode #about-me, 
-body.dark-mode #expertise, 
-body.dark-mode #tech-skills, 
-body.dark-mode #soft-skills, 
-body.dark-mode #contact, 
-body.dark-mode #resume {
-    background-color: #111;
-    color: #eee;
-    margin: 2em 5%;
-    padding: 2em;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+p {
+    margin: 1em 0; /* Margin around paragraphs */
 }
 
-/* List styling */
+/* Section styling */
+#about-me, #expertise, #tech-skills, #soft-skills, #contact, #resume {
+    background-color: #ffffff; /* Section background color */
+    margin: 2em 5%; /* Margin around sections */
+    padding: 2em; /* Padding inside sections */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
 ul {
-    list-style: none;
-    padding: 0;
+    list-style: none; /* Removes bullet points */
+    padding: 0; /* Removes padding */
 }
 
 li {
-    padding: 0.5em 0;
+    padding: 0.5em 0; /* Padding around list items */
 }
 
 /* Contact icons styling */
 .contact-icons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1em;
-}
-
-.contact-divider {
-    border: 0;
-    height: 1px;
-    background: #575757;
-    margin: 1em 0;
+    display: flex; /* Flexbox for alignment */
+    flex-direction: column; /* Stack icons vertically */
+    align-items: center; /* Center icons */
+    gap: 1em; /* Space between icons */
 }
 
 .contact-icons a {
-    color: #183f69;
-    text-decoration: none;
-    font-size: 1.2em;
-}
-
-body.dark-mode .contact-icons a {
-    color: #eee;
+    color: #183f69; /* Link text color */
+    text-decoration: none; /* Removes underline */
+    font-size: 1.2em; /* Font size */
 }
 
 .contact-icons i {
-    margin-right: 0.5em;
+    margin-right: 0.5em; /* Space between icon and text */
 }
 
 .contact-icons a:hover {
-    text-decoration: underline;
-}
-
-/* Contact form styling (if needed) */
-#contact form {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    margin-top: 1em;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#contact form input, 
-#contact form textarea {
-    width: 100%;
-    padding: 0.7em;
-    border: 1px solid #575757;
-    border-radius: 4px;
-    background-color: inherit;
-    color: inherit;
-}
-
-#contact form button {
-    padding: 0.7em;
-    border: none;
-    border-radius: 4px;
-    background-color: #183f69;
-    color: #ffffff;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-#contact form button:hover {
-    background-color: #575757;
+    text-decoration: underline; /* Underline on hover */
 }
 
 /* Footer styling */
 footer {
-    background-color: #183f69; /* Light mode: blue */
-    color: #ffffff;
-    padding: 1em 0;
-    font-size: 0.8em;
-}
-
-body.dark-mode footer {
-    background-color: #000;
-    color: #eee;
+    background-color: #183f69; /* Footer background color */
+    color: #ffffff; /* Footer text color */
+    padding: 1em 0; /* Padding inside the footer */
+    font-size: 0.8em; /* Font size */
 }
 
 .footer-center {
-    text-align: center;
+    text-align: center; /* Center align the text */
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
     .profile-pic-container {
-        width: 10em;
-        height: 10em;
+        width: 10em; /* Smaller width for small screens */
+        height: 10em; /* Smaller height for small screens */
     }
 
     .profile-pic {
-        width: 100%;
-        height: 10em;
-        object-position: top center;
+        width: 100%; /* Ensures the image covers the width of the container */
+        height: 10em; /* Height of the image */
+        object-position: top center; /* Ensures the image is centered horizontally */
     }
 
     header h1 {
-        font-size: 1.5em;
+        font-size: 1.5em; /* Smaller font size for small screens */
     }
 
     header p {
-        font-size: 1em;
+        font-size: 1em; /* Smaller font size for small screens */
     }
 
-    body:not(.dark-mode) #about-me, 
-    body:not(.dark-mode) #expertise, 
-    body:not(.dark-mode) #tech-skills, 
-    body:not(.dark-mode) #soft-skills, 
-    body:not(.dark-mode) #contact, 
-    body:not(.dark-mode) #resume,
-    body.dark-mode #about-me, 
-    body.dark-mode #expertise, 
-    body.dark-mode #tech-skills, 
-    body.dark-mode #soft-skills, 
-    body.dark-mode #contact, 
-    body.dark-mode #resume {
-        margin: 2em 3%;
-        padding: 1em;
+    #about-me, #expertise, #tech-skills, #soft-skills, #contact, #resume {
+        margin: 2em 3%; /* Smaller margin for small screens */
+        padding: 1em; /* Smaller padding for small screens */
     }
 
     footer {
-        text-align: center;
-    }
-
-    /* Switch to single column on smaller screens */
-    #expertise ul {
-        column-count: 1 !important;
+        text-align: center; /* Center align the footer text */
     }
 }
-
-/* Increase line spacing in About Me section for readability */
-#about-me p {
-    line-height: 1.8;
-}
-
-/* Soft Skills remains as is, for left-alignment and centered container, 
-   keep or remove the previous snippet for #soft-skills. */
-
-/* Two-column grid layout for the #expertise list */
-#expertise ul {
-    display: grid;
-    /* Exactly two columns */
-    grid-template-columns: 1fr 1fr;
-    
-    /* Increase vertical & horizontal spacing between items */
-    row-gap: 1em;
-    column-gap: 3em;
-    
-    text-align: left;
-    margin: 1em auto;
-    list-style-type: disc;
-    padding-left: 8em auto;
-    max-width: 1000px; /* Control overall width */
-  }
-  
-  @media (max-width: 768px) {
-    #expertise ul {
-      grid-template-columns: 1fr; /* Single column on smaller screens */
-    }
-  }
